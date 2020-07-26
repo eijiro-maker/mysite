@@ -1,0 +1,9 @@
+{% extends 'moviedb/base.html' %}
+
+{% block content %}
+    <article>
+        <h1>{{ movie.title }}</h1>
+        <p>{{ movie.overview }} - {{ movie.viewed_at }}</p>
+        <p>{{ movie.explain | linebreaks }}</p>
+    </article>
+{% endblock %}
