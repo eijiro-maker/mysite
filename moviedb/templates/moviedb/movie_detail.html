@@ -3,7 +3,8 @@
 {% block content %}
     <article>
         <h1>{{ movie.title }}</h1>
-        <p>{{ movie.overview }} - {{ movie.viewed_at }}</p>
+        <p>Disk No.{{ movie.disk}}</p>
+        <p>{{ movie.overview }} - 放送日：{{ movie.recorded_at }}</p>
         <p>{{ movie.explain | linebreaks }}</p>
     </article>
 {% endblock %}

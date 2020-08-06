@@ -5,6 +5,7 @@
     {% for movie in movie_list %}
         <article>
             <h2><a href="{% url 'moviedb:movie_detail' movie.pk %}">{{ movie.title }}</a></h2>
+            <h3>Disk No.{{ movie.disk}}</h3>
             <p>{{ movie.overview }}</p>
         </article>
     {% endfor %}
