@@ -2,11 +2,11 @@
 
 {% block content %}
     <h1>映画一覧</h1>
-    {% for movie in movie_list %}
-        <article>
-            <h2><a href="{% url 'moviedb:movie_detail' movie.pk %}">{{ movie.title }}</a></h2>
-            <h3>Disk No.{{ movie.disk}}</h3>
-            <p>{{ movie.overview }}</p>
-        </article>
-    {% endfor %}
+
+        <table class="table">
+          <tr><th>Disk No.</th><th>title</th><th>overview</th></tr>
+          {% for movie in movie_list %}
+            <tr><td>{{ movie.disk}}</td><td><a href="{% url 'moviedb:movie_detail' movie.pk %}">{{ movie.title }}</a></td><td>{{ movie.overview }}</td></tr>
+          {% endfor %}
+        </table>
 {% endblock %}

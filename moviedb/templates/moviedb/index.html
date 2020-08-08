@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+{% bootstrap_css %} # これを書かないとタグが適応されない
+{% bootstrap_javascript jquery='full' %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,5 +11,12 @@
 <h1>Hello!!</h1>
 <H2>Gooby!!</H2>
 <h3>See you again</h3>
+<button type="button" class="btn">Button</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item"
+      src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen=""></iframe>
+</div>
 </body>
 </html>
