@@ -1,12 +1,12 @@
 {% extends 'moviedb/base.html' %}
-
+{% block title %}タイトル一覧{% endblock %}
 {% block content %}
-    <h1>映画一覧</h1>
-
-        <table class="table">
-          <tr><th>Disk No.</th><th>title</th><th>overview</th></tr>
-          {% for movie in movie_list %}
-            <tr><td>{{ movie.disk}}</td><td><a href="{% url 'moviedb:movie_detail' movie.pk %}">{{ movie.title }}</a></td><td>{{ movie.overview }}</td></tr>
-          {% endfor %}
+        <table class="table table-striped">
+          <thead class="thead-dark"><tr><th>Disk No.</th><th>title</th><th>overview</th></tr></thead>
+            <tbody>
+                {% for movie in movie_list %}
+                <tr><th>{{ movie.disk}}</th><td><a href="{% url 'moviedb:movie_detail' movie.pk %}">{{ movie.title }}</a></td><td>{{ movie.overview }}</td></tr>
+                {% endfor %}
+            </tbody>
         </table>
 {% endblock %}
