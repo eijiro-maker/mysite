@@ -1,55 +1,10 @@
-<!DOCTYPE html>
-{% bootstrap_css %} # これを書かないとタグが適応されない
-{% bootstrap_javascript jquery='full' %}
+{% extends 'moviedb/base.html' %}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>動画リスト</title>
-</head>
-<body>
-<h1>Hello!!</h1>
-<H2>Gooby!!</H2>
-<h3>See you again</h3>
-<button type="button" class="btn">Button</button>
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>1</th>
-            <td>Hanako</td>
-            <td>Qiita</td>
-            <td>@Hanaq</td>
-        </tr>
-        <tr>
-            <th>2</th>
-            <td>Taro</td>
-            <td>Qiita</td>
-            <td>@TaroQ</td>
-        </tr>
-        <tr>
-            <th>1</th>
-            <td>Hanako</td>
-            <td>Qiita</td>
-            <td>@Hanaq</td>
-        </tr>
-        <tr>
-            <th>2</th>
-            <td>Taro</td>
-            <td>Qiita</td>
-            <td>@TaroQ</td>
-        </tr>
-    </tbody>
-</table>
-</body>
-</html>
+{% block content %}
+<div class="container">
+  <h1>ビデオリスト</h1>
+  <hr>
+  {% include "moviedb/movie_list.html" %}
+  {% include "moviedb/pagination.html" %}
+</div>
+{% endblock %}
